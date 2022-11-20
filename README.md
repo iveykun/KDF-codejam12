@@ -3,6 +3,8 @@ in the folder called frontend, you will find the files to put in a anvil fronten
 each of the "pages" in our slide is in a different form folder. 
 we also have a custom javascript section in the server side to be able to handle audio while bypassing the paid features of anvil and a database with tables
 
+This repo also contains all the imagenet synsets names which are important for the ML model to work, since they do not directly return a humanly readable string. We import this git into our colab backend so that the ML model can access those txt
+
 The anvil app can be accessed here from most browsers: https://VU6QEEN6ZEMMIF44.anvil.app/XC2R5RNF4Y6THMWFTL6B7EII
 
 
