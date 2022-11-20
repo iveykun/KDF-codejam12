@@ -1,7 +1,8 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {tooltip: '', background: 'theme:Secondary Container', foreground: '',
+    border: '', visible: true, role: null, html: '@theme:standard-page.html'}
   event_bindings: {}
 components:
 - type: ColumnPanel
@@ -68,13 +69,15 @@ components:
   layout_properties: {slot: nav-right}
 - type: RichText
   properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '', visible: true, font_size: 39, content: temp name, font: rage,
+    foreground: '', visible: true, font_size: 39, content: tailor maid, font: rage,
     spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
   name: rich_text_1
   layout_properties: {slot: title}
   event_bindings: {}
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: column_panel_1
   layout_properties: {slot: left-nav}
   components:
@@ -94,3 +97,31 @@ components:
     name: button_4
     layout_properties: {grid_position: 'IXUPUU,CXYTIL'}
     event_bindings: {click: button_4_click}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: false
+    name: drop_down_1
+    layout_properties: {grid_position: 'AHWISX,JLTAPT', row_background: ''}
+    event_bindings: {change: drop_down_1_change}
+  - type: DropDown
+    properties: {}
+    name: drop_down_2
+    layout_properties: {grid_position: 'ENTOFJ,KDHILK'}
+    event_bindings: {change: drop_down_2_change}

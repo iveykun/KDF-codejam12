@@ -1,12 +1,52 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {tooltip: '', background: 'theme:Secondary Container', foreground: '',
+    border: '', visible: true, role: null, html: '@theme:standard-page.html'}
+  event_bindings: {}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: outlined_card_1
+    layout_properties: {grid_position: 'APMKWN,OTCKRX'}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: 29, content: '', font: pristina,
+        spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+      name: rich_text_2
+      layout_properties: {grid_position: 'UCTBKU,IQNZMI'}
+      data_bindings: []
+      components: []
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Voice Command, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'TXMAYX,IMZOZE'}
+    event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'Suggest an outfit ', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'ANKCQJ,DSHNCW'}
+    event_bindings: {click: button_1_click}
+  - type: Image
+    properties: {role: null, vertical_align: center, height: '200', tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+      source: '', spacing_below: small, background: '', horizontal_align: center}
+    name: image_1
+    layout_properties: {grid_position: 'MESFYX,OGQSCH'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -32,9 +72,19 @@ components:
     name: button_4
     layout_properties: {grid_position: 'BMVRDC,AIMJCL'}
     event_bindings: {click: button_4_click}
+  - type: DropDown
+    properties: {}
+    name: drop_down_1
+    layout_properties: {grid_position: 'SDPDCY,LPAWPA'}
+    event_bindings: {change: drop_down_1_change}
+  - type: DropDown
+    properties: {}
+    name: drop_down_2
+    layout_properties: {grid_position: 'QSTXUS,BZMDDG'}
+    event_bindings: {change: drop_down_2_change}
 - type: RichText
   properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '', visible: true, font_size: null, content: temp name, font: '',
+    foreground: '', visible: true, font_size: 39, content: tailor maid, font: rage,
     spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
   name: rich_text_1
   layout_properties: {slot: title}

@@ -774,7 +774,7 @@ input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil
 }
 
 .anvil-dropdown select option {
-  background-color: green;
+  background-color: #FAF9F6;
 }
 
 .anvil-component select {
